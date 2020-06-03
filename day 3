@@ -57,3 +57,60 @@ func main() {
 }
 
 //5.deleting item from map
+
+package main
+import "fmt"
+func main() {  
+    employeeName := map[string]string{
+        "nat" : "ceo",
+        "hussain" : "sr.eng",
+        "kartheek" : "trainee",     
+    }
+    fmt.Println("map before deletion", employeeName)
+    delete(employeeName, "nat")
+    fmt.Println("map after deletion", employeeName)
+}
+
+//6.structure in maps
+
+package main
+import "fmt"
+type employee struct {  
+    Name string
+    role string
+}
+func main() {  
+    emp1 := employee{
+        Name: "nat",
+        role: "USA",
+    }
+    emp2 := employee{
+        Name: "hussain",
+        role: "sr.eng",
+    }
+    emp3 := employee{
+        Name: "kartheek",
+        role: "trainee",
+    }
+    employeeInfo := map[string]employee{
+        "nat": emp1,
+        "hussain": emp2,
+        "kartheek": emp3,
+    }
+        for role, info := range employeeInfo {
+        fmt.Printf("Employee: %s Role: %s\n", role, info.role)
+    }
+}
+
+//7.map length\\
+
+package main
+import "fmt"
+func main() {  
+    employeeName := map[string]string{
+        "nat": "ceo",
+        "hussain": "sr.eng",
+    }
+    fmt.Println("length is", len(employeeName))
+
+}
