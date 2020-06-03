@@ -102,7 +102,7 @@ func main() {
     }
 }
 
-//7.map length\\
+//7.map length
 
 package main
 import "fmt"
@@ -112,5 +112,4 @@ func main() {
         "hussain": "sr.eng",
     }
     fmt.Println("length is", len(employeeName))
-
 }
