@@ -1,1 +1,22 @@
+//1.pointer declaration
+
+package main
+import "fmt"
+func main() {  
+    b := 255
+    var a *int = &b
+    fmt.Printf("Type of a is %T\n", a)
+    fmt.Println("address of b is", a)
+}
+
+//2.pointer using new function
+
+package main
+import "fmt"
+func main() {  
+    size := new(int)
+    fmt.Printf("Size value is %d, type is %T, address is %v\n", *size, size, size)
+    *size = 85
+    fmt.Println("New size value is", *size)
+}
 
