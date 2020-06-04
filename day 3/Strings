@@ -19,7 +19,6 @@ func main() {
 
 package main
 import "fmt"
-
 func printBytes(s string) {  
     fmt.Printf("Bytes: ")
     for i := 0; i < len(s); i++ {
@@ -32,10 +31,51 @@ func printChars(s string) {
         fmt.Printf("%c ", s[i])
     }
 }
+
+//3.creating string from slice of byte
+
+package main
+import "fmt"
+func main() {  
+    byteSlice := []byte{0x43, 0x61, 0x66, 0xC3, 0xA9}
+    str := string(byteSlice)
+    fmt.Println(str)
+}
 func main() {  
     name := "Hello World"
     fmt.Printf("String: %s\n", name)
     printChars(name)
     fmt.Printf("\n")
     printBytes(name)
+}
+
+//4.string comparision
+
+package main
+import "fmt"
+func compareStrings(str1 string, str2 string) {  
+    if str1 == str2 {
+        fmt.Printf("%s and %s are equal\n", str1, str2)
+        return
+    }
+    fmt.Printf("%s and %s are not equal\n", str1, str2)
+}
+func main() {  
+    string1 := "Go"
+    string2 := "Go"
+    compareStrings(string1, string2)
+    string3 := "hello"
+    string4 := "world"
+    compareStrings(string3, string4)
+}
+
+//5.string concatenation
+
+package main
+import "fmt"
+func main() {  
+    string1 := "Go"
+    string2 := "is awesome"
+    result := string1 + " " + string2
+    fmt.Println(result)
 }
