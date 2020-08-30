@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sample-deployment
+  labels:
+    name: sample-deployment
+    app: sample
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      name: sample-pod
+      app: sample
+  template:
+    metadata:
+      name: sample-pod
+      labels:
+        name: sample-pod
+        app: sample
+    spec:
+      containers:
+        - name: sample
+          image: home/sample
+          ports:
+            - containerPort: 8080
